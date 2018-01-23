@@ -1,0 +1,34 @@
+{
+  "name": "nicar2018_reactive-frameworks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:The-Politico/nicar2018_reactive-frameworks.git",
+  "author": "Jon McClure <jmcclure@politico.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "preact": "^8.2.7",
+    "preact-compat": "^3.18.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-preact": "^1.1.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.5.0"
+  },
+  "scripts": {
+    "start": "parcel src/index.html -p 3000",
+    "build": "parcel build src/index.html --public-url ./ --out-dir dist"
+  }
+}
