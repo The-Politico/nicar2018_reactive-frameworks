@@ -104,6 +104,6 @@ typings/
 .env
 
 dist/
-
+.cache/
 
 # End of https://www.gitignore.io/api/node,macOS,linux
