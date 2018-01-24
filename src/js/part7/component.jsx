@@ -1,4 +1,4 @@
-// PART 3: Hello Props
+// PART 7: Hello Bubbling
 
 import { h, Component } from 'preact';
 
@@ -9,11 +9,18 @@ class ScaryComponent extends Component {
   }
 
   render (props, state) {
-    // Create our options
     const radioOptions = props.options.map(option => (
       <div>
         <label>
-          <input type='radio' name='radio-options' />
+          <input
+            type='radio'
+            name='radio-options'
+            onClick={() => {
+              this.setState({ selectedAnimal: option });
+              props.changeAnimal(option);
+            }}
+            checked={option === this.state.selectedAnimal}
+          />
           {option}
         </label>
       </div>
@@ -21,7 +28,6 @@ class ScaryComponent extends Component {
 
     return (
       <div>
-        <h3>{this.state.selectedAnimal}, oh my!</h3>
         {radioOptions}
       </div>
     );

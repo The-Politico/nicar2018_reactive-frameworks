@@ -1,5 +1,29 @@
 <section>
   <h4>Part 7: Hello Bubbling</h4>
-  <p>Event bubbling.</p>
+  <p>Event bubbling provides a way for child components to update their parents' state.</p>
   <div id="part7-app" class="demo"></div>
+
+<div class="key-code">
+<h6><i class="fa fa-code"></i> Key code</h6>
+<script type="text/plain" class="language-jsx">// app.js
+// Pass a parent component's update function down to its child
+<ChildComponent
+  options={data}
+  changeAnimal={
+    (animal) => this.setState({ animal: animal })
+  }
+/>
+</script>
+<script type="text/plain" class="language-jsx">// component.js
+// The child can then call that function to update its parent!
+<input
+  type='radio'
+  name='radio-options'
+  onClick={() => {
+    // ...
+    props.changeAnimal(option);
+  }}
+/>
+</script>
+</div>
 </section>

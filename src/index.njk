@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>POLITICO/NICAR18 Reactive Frameworks w/out Fear</title>
-    <link rel="stylesheet" type="text/css" href="https://www.politico.com/interactives/cdn/fonts/base-icons/politico-base-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  </head>
-  <body>
-    <header>
-      <b class="icon icon-politico"></b> <span>NICAR2018</span>
-    </header>
-    <article>
+{%extends "templates/base.njk"%}
 
+{%block content%}
 
-      <img src="images/gonzo.png" />
-      <h1>Reactive Frameworks without Fear</h1>
+<section>
+  <h4>Future Syntax</h4>
+  <p>We'll be using a few parts of future JavaScript syntax. If you haven't messed around with it yet, <a href="https://codeburst.io/es6-tutorial-for-beginners-5f3c4e7960be" target="_blank">here's a good walk-through</a>.</p>
+  <p>For the purposes of today, we'll mostly just use <a href="./syntax.njk">these basics.</a></p>
+</section>
 
-      {%include "templates/part1.njk"%}
-      {%include "templates/part2.njk"%}
-      {%include "templates/part3.njk"%}
-      {%include "templates/part4.njk"%}
-      {%include "templates/part5.njk"%}
-      {%include "templates/part6.njk"%}
-      {%include "templates/part7.njk"%}
-      {%include "templates/part8.njk"%}
+{%include "templates/part1.njk"%}
+{%include "templates/part2.njk"%}
+{%include "templates/part3.njk"%}
+{%include "templates/part4.njk"%}
+{%include "templates/part5.njk"%}
+{%include "templates/part6.njk"%}
+{%include "templates/part7.njk"%}
+{%include "templates/part8.njk"%}
+{%endblock%}
 
-
-    </article>
-    <script src="js/main.js"></script>
-    <script src="js/part1/app.jsx"></script>
-    <script src="js/part2/app.jsx"></script>
-    <script src="js/part3/app.jsx"></script>
-    <script src="js/part4/app.jsx"></script>
-    <script src="js/part5/app.jsx"></script>
-    <script src="js/part6/app.jsx"></script>
-  </body>
-</html>
+{%block scripts%}
+<script src="js/part1/app.jsx"></script>
+<script src="js/part2/app.jsx"></script>
+<script src="js/part3/app.jsx"></script>
+<script src="js/part4/app.jsx"></script>
+<script src="js/part5/app.jsx"></script>
+<script src="js/part6/app.jsx"></script>
+<script src="js/part7/app.jsx"></script>
+{%endblock%}

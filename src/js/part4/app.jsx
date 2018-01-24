@@ -1,4 +1,4 @@
-// PART 4: Hello Components 2
+// PART 4: Hello Component Classes
 
 import { h, render } from 'preact';
 import ListItem from './component';

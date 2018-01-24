@@ -6,13 +6,17 @@
   "author": "Jon McClure <jmcclure@politico.com>",
   "license": "MIT",
   "dependencies": {
-    "d3": "^4.12.2"
+    "bootstrap": "^4.0.0",
+    "d3": "^4.12.2",
+    "unistore": "^3.0.3",
+    "preact": "^8.2.7",
+    "preact-compat": "^3.18.0",
+    "prismjs": "^1.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-preact": "^1.1.0",
-    "bootstrap": "^4.0.0",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -23,17 +27,18 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
+    "json-server": "^0.12.1",
     "klaw-sync": "^3.0.2",
     "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
     "nunjucks": "^3.0.1",
     "parcel-bundler": "^1.5.0",
-    "parcel-plugin-nunjucks": "git://github.com/The-Politico/parcel-plugin-nunjucks.git#watch-templates",
-    "preact": "^8.2.7",
-    "preact-compat": "^3.18.0",
-    "prismjs": "^1.10.0"
+    "parcel-plugin-nunjucks": "git://github.com/The-Politico/parcel-plugin-nunjucks.git#watch-templates"
   },
   "scripts": {
-    "start": "parcel src/index.njk -p 3000",
+    "start": "npm-run-all --parallel dev server",
+    "dev": "parcel src/index.njk -p 3000",
+    "server": "node server/server.js",
     "build": "parcel build src/index.njk --public-url ./ --out-dir docs"
   }
 }

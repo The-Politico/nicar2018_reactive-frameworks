@@ -1,0 +1,54 @@
+{%extends "templates/base.njk"%}
+{%block content%}
+<section>
+  <h4>Future Syntax Equivalences</h4>
+
+<h6>Declaring variables</h6>
+<script type="text/plain" class="language-jsx">
+const myVariable = true;
+// ... is equivalent to...
+var myVariable = true;
+</script>
+<br />
+<h6>Writing functions</h6>
+<script type="text/plain" class="language-jsx">const loggerFunc = () => {
+  console.log('Hiya!');
+};
+// ... is equivalent to...
+var loggerFunc = function() {
+  console.log('Hiya!');
+}
+</script>
+<script type="text/plain" class="language-jsx">const addOneFunc = (num) => num + 1;
+// ... is equivalent to...
+function addOneFunc(num) {
+  return num + 1;
+}
+</script>
+<br />
+<h6>Concatenating strings</h6>
+<script type="text/plain" class="language-jsx">const oneString = 'cat in';
+const twoString = 'the hat';
+
+const allString = `${oneString} ${twoString}`;
+// ... is equivalent to...
+const allString = onestring + ' ' + twoString;
+</script>
+<br />
+<h6>Importing and Exporting scripts</h6>
+<p>
+  There's not really a clean equivalent of this in present-day JavaScript, but if you're familiar with importing libraries in Python or Ruby, it should look pretty normal.
+</p>
+
+<script type="text/plain" class="language-jsx">// myExportFile.js
+const myVar = 2;
+
+export default myVar;
+</script>
+<script type="text/plain" class="language-jsx">// myImportFile.js
+import myVariable from './myfile';
+</script>
+</div>
+
+</section>
+{%endblock%}

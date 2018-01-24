@@ -1,4 +1,4 @@
-// PART 4: Hello Props
+// PART 6: Hello State
 
 import { h, render } from 'preact';
 import Component from './component';
