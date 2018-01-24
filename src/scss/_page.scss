@@ -34,4 +34,14 @@ article{
   input[type="radio"]{
     margin-right: 5px;
   }
+
+  .viz-box svg{
+    width: 100px;
+    height: 100px;
+  }
+  .company-box{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+  }
 }

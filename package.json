@@ -6,11 +6,13 @@
   "author": "Jon McClure <jmcclure@politico.com>",
   "license": "MIT",
   "dependencies": {
+    "d3": "^4.12.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-preact": "^1.1.0",
+    "bootstrap": "^4.0.0",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -21,11 +23,10 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-standard": "^3.0.1",
-    "node-sass": "^4.7.2",
-    "parcel-bundler": "^1.5.0",
-    "bootstrap": "^4.0.0",
     "klaw-sync": "^3.0.2",
+    "node-sass": "^4.7.2",
     "nunjucks": "^3.0.1",
+    "parcel-bundler": "^1.5.0",
     "parcel-plugin-nunjucks": "git://github.com/The-Politico/parcel-plugin-nunjucks.git#watch-templates",
     "preact": "^8.2.7",
     "preact-compat": "^3.18.0",
