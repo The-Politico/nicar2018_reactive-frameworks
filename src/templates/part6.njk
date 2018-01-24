@@ -1,0 +1,54 @@
+<section>
+  <h4>Part 6: Hello State</h4>
+  <p>State represents...</p>
+
+  <div id="part6-app" class="demo"></div>
+
+
+<div class="key-code">
+<h6><i class="fa fa-code"></i> Key code</h6>
+<script type="text/plain" class="language-jsx">// State are values maintained internally within a component.
+// But a component's state can be set by external values by using prop
+class ScaryComponent extends Component {
+  constructor (props) {
+    super();
+    this.state.selectedOption = props.options[0];
+  }
+
+  // ...
+  render () {
+    return (
+      // ...
+      <h3>{this.state.selectedOption}, oh my!</h3>
+      // ...
+    );
+  }
+}
+
+// We can change our state inside our component with:
+//  this.setState({ selectedOption: newValue });
+</script>
+</div>
+
+
+  <div class="homework">
+    <h6><i class="fa fa-pencil"></i> Try it together!</h6>
+    <ul>
+      <li>Update the component's state when a radio button is clicked.</li>
+      <li>Make the default button checked when the component is mounted -- i.e., a "controlled component!"</li>
+    </ul>
+  </div>
+
+  <div class="further-reading">
+    <h6><i class="fa fa-bookmark"></i> Further reading</h6>
+    <ul>
+      <li>
+        <a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank">State and Lifecycle</a>
+      </li>
+      <li>
+        <a href="https://reactjs.org/docs/forms.html#controlled-components" target="_blank">Controlled Components</a>
+      </li>
+
+    </ul>
+  </div>
+</section>

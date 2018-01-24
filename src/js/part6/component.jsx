@@ -5,7 +5,6 @@ import { h, Component } from 'preact';
 class ScaryComponent extends Component {
   constructor (props) {
     super();
-    // set initial time:
     this.state.selectedOption = props.options[0];
   }
 

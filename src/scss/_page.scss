@@ -25,9 +25,10 @@ article{
     margin-top: 20px;
     padding: 10px;
     background-color: $shadowgrey;
+    border: 1px dashed $satan;
   }
-  .homework{
-    margin-top: 20px;
+  .homework, .key-code, .further-reading{
+    margin-top: 40px;
   }
 
   input[type="radio"]{
