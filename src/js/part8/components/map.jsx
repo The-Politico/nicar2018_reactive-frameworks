@@ -12,7 +12,7 @@ class Map extends React.Component {
   componentDidMount () {
     const svg = d3.select('#map-box').append('svg')
       .attr('width', 400)
-      .attr('height', 400);
+      .attr('height', 300);
 
     const paths = svg.selectAll('path')
       .data(featureCollection.features);
@@ -20,7 +20,7 @@ class Map extends React.Component {
     paths.enter().append('path')
       .attr('d', d3.geoPath().projection(
         d3.geoAlbersUsa().scale(1)
-          .fitSize([400, 400], featureCollection)
+          .fitSize([400, 300], featureCollection)
       ))
       .attr('stroke', '#666')
       .attr('fill', d => {

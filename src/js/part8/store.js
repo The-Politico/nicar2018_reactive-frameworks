@@ -8,7 +8,6 @@ import _ from 'lodash';
 const initialState = {
   states: [],
   selected: null,
-  results: [],
 };
 
 // ACTIONS
@@ -28,10 +27,6 @@ export const actions = {
     type: 'ADD_STATES',
     states: states,
   }),
-  addResults: (results) => ({
-    type: 'ADD_RESULTS',
-    results: results,
-  })
 };
 
 // REDUCER

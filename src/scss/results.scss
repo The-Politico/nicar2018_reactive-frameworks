@@ -1,0 +1,29 @@
+#results-component{
+  margin-top: 20px;
+  .row{
+    height: 90px;
+  }
+  img{
+    max-width: 100%;
+  }
+  .progress{
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: lightgrey;
+  }
+  .col:first-child{
+    width: 80px;
+    div{
+      display : flex;
+      align-items : center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .progress-bar{
+    font-weight: bold;
+    background-color: orange;
+  }
+}

@@ -2,4 +2,15 @@ header{
   padding: 10px 20px;
   width: 100%;
   border-bottom: 1px solid $lightgrey;
+  color: $politico-red;
+  span{
+    font-family: $headline;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: grey;
+    vertical-align: bottom;
+  }
+  b.icon{
+    line-height: 30px;
+  }
 }

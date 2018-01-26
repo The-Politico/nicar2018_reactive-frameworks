@@ -1,0 +1,127 @@
+<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <title>POLITICO/NICAR18 Reactive Frameworks w/out Fear</title> <link rel="stylesheet" type="text/css" href="https://www.politico.com/interactives/cdn/fonts/base-icons/politico-base-icons.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <link rel="stylesheet" href="78de3e9a5a948f2d4c50e43fb1b83949.css"></head> <body> <header> <b class="icon icon-politico"></b> <span>NICAR18</span> </header> <article> <img src="c5977c76aa81278b79b31cb259a2d1a3.png"> <h1>Reactive Frameworks without Fear</h1> <div class="byline gonzo"> <a href="https://twitter.com/tylrfishr">Tyler Fisher</a> | <a href="https://twitter.com/JonRMcClure">Jon M<sup>c</sup>Clure</a> </div> <h1>---</h1> <section> <h4>Why you're here</h4> <p><a href="https://docs.google.com/presentation/d/1OMPpGp1AWZCbCgWsUUdvEyxlBWY_KTXfxvCkYktaVp4/edit?usp=sharing" target="_blank">Why you need a reactive framework in your life</a>, in five minutes or less.</p> </section> <section> <h4>What you need</h4> <p>Grab this repo from <a href="https://github.com/The-Politico/nicar2018_reactive-frameworks" target="_blank">github</a> and install dependencies. (Assuming you have <a href="https://nodejs.org/en/download/">node</a> installed already.)</p> <script type="text/plain" class="language-bash">$ git clone git@github.com:The-Politico/nicar2018_reactive-frameworks.git
+$ cd nicar2018_reactive-frameworks
+$ npm install</script> <p>Now run the dev script to get started.</p> <script type="text/plain" class="language-bash">$ npm start</script> <p>Check out the files in your code editor of choice. The ones we'll be playing with are here:</p> <script type="text/plain" class="language-bash">src/
+ -- js/
+ -- -- part1/
+ -- -- part2/
+etc...
+</script> </section> <section> <h4>Note on Future Syntax</h4> <p>We'll be using a few parts of future JavaScript syntax. If you haven't messed around with it yet, <a href="https://codeburst.io/es6-tutorial-for-beginners-5f3c4e7960be" target="_blank">here's a good walk-through</a>.</p> <p>For the purposes of today, though, just check out <a href="f8e741c24770ad365e726f3d8e9b4aa3.html">these basics.</a></p> </section> <h1>><<</h1> <section> <h4>Part 1: Hello JSX</h4> <p>JSX is a special markup syntax that lets you easily write HTML in JavaScript.</p> <div id="part1-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// JSX is HTML in JavaScript...  like peanut butter in chocolate.
+const someJSX = (
+<p>Hello, world! I did JSX!</p>
+);
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Create a second paragraph in JSX.</li> <li>Use some JavaScript <em>inside</em> your JSX.</li> </ul> </div> <div class="further-reading"> <h6><i class="fa fa-bookmark"></i> Further reading</h6> <ul> <li> <a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank">Introducing JSX</a> </li> </ul> </div> </section> <h1>~~/</h1> <section> <h4>Part 2: Hello Components</h4> <p>Components are simple functions that render markup using JSX.</p> <div id="part2-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// Use components like JSX elements
+const someJSX = (
+  <div>
+    <h6>More JSX</h6>
+    <Component />
+  </div>
+);
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Move your component to a separate module.</li> </ul> </div> </section> <h1>X#X</h1> <section> <h4>Part 3: Hello Props</h4> <p>Props are arbitray data passed to a component. That data can then be used to determine your component's content.</p> <div id="part3-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// Pass props to components
+<ListItem text='Some text passed to a component as a property!' />
+
+// ...
+
+const ListItem = (props) => (
+  <li>{props.text}</li>
+);
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Get some JSON and use it to create multiple list items!</li> </ul> </div> </section> <h1>&--</h1> <section> <h4>Part 4: Hello Component Classes</h4> <p>Components built from a special React class have some extra functionality.</p> <div id="part4-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// Extending a component class
+class ListItem extends Component {
+  render (props) {
+    return <li>{props.text}</li>;
+  }
+}
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Make your list items all SCREAM-case with a component class method.</li> </ul> </div> <div class="further-reading"> <h6><i class="fa fa-bookmark"></i> Further reading</h6> <ul> <li> <a href="https://reactjs.org/docs/react-component.html" target="_blank">React Component</a> </li> <li> <a href="https://preactjs.com/guide/types-of-components" target="_blank">Preact Component</a> </li> </ul> </div> </section> <h1>+**</h1> <section> <h4>Part 5: Hello Component Lifecycle. (Hello D3.)</h4> <p>Components have a "lifecycle" that triggers methods in the moments before and after components are added to the DOM or updated. You can plug third-party libraries into those methods to do complex things.</p> <div id="part5-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// Use Lifecycle methods to hook third party libraries into React
+componentDidMount () {
+  const node = d3.select(`.viz-box.no${this.datum.value} svg`);
+
+  // ...
+
+  node.append('rect')
+    .attr('width', sideLength)
+    .attr('height', sideLength)
+    .attr('x', 0)
+    .attr('y', 0);
+}
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Fix the order in the data and use another lifecycle method to update the chart.</li> </ul> </div> <div class="further-reading"> <h6><i class="fa fa-bookmark"></i> Further reading</h6> <ul> <li> <a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank">React Component Lifecycle</a> </li> <li> <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" target="_blank">Preact Lifecycle Methods</a> </li> </ul> </div> </section> <h1>$(()</h1> <section> <h4>Part 6: Hello State</h4> <p>As opposed to props, which are data handed down to a component from its parent, state is data that is internal to the component and that it can create and change on its own.</p> <div id="part6-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// State are values maintained internally within a component.
+// But a component's state can be set by external values by using prop
+class ScaryComponent extends Component {
+  constructor (props) {
+    super();
+    this.state.selectedOption = props.options[0];
+  }
+
+  // ...
+  render () {
+    return (
+      // ...
+      <h3>{this.state.selectedOption}, oh my!</h3>
+      // ...
+    );
+  }
+}
+
+// We can change our state inside our component with:
+//  this.setState({ selectedOption: newValue });
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Update the component's state when a radio button is clicked.</li> <li>Make the default button checked when the component is mounted -- i.e., a "controlled component!"</li> </ul> </div> <div class="further-reading"> <h6><i class="fa fa-bookmark"></i> Further reading</h6> <ul> <li> <a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank">State and Lifecycle</a> </li> <li> <a href="https://reactjs.org/docs/forms.html#controlled-components" target="_blank">Controlled Components</a> </li> </ul> </div> </section> <h1>^^``</h1> <section> <h4>Part 7: Hello Bubbling</h4> <p>Event bubbling provides a way for child components to update their parents' state.</p> <div id="part7-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// app.js
+// Pass a parent component's update function down to its child
+<ChildComponent
+  options={data}
+  changeAnimal={
+    (animal) => this.setState({ animal: animal })
+  }
+/>
+</script> <script type="text/plain" class="language-jsx">// component.js
+// The child can then call that function to update its parent!
+<input
+  type='radio'
+  name='radio-options'
+  onClick={() => {
+    // ...
+    props.changeAnimal(option);
+  }}
+/>
+</script> </div> </section> <h1>{\{~</h1> <section> <h4>Part 8: Hello Stores</h4> <p>With any normally complex app, chaining components and bubbling events through them becomes messy. That's when we can create a central Store that we can update from anywhere in the app and react to in our components through basic props.</p> <div id="part8-app" class="demo"></div> <div class="key-code"> <h6><i class="fa fa-code"></i> Key code</h6> <script type="text/plain" class="language-jsx">// store.js
+// Create some state
+const initialState = {
+  selected: null,
+};
+
+// Write an action to signal an update to the state
+export const actions = {
+  changeSelected: (selected) => ({
+    type: 'CHANGE_SELECTED',
+    selected: selected
+  }),
+}
+
+// Write a reducer to process the update and change the store
+const reducer = (currentState = initialState, action) => {
+  switch (action.type) {
+    case 'CHANGE_SELECTED':
+      return _.assign({}, currentState, { selected: action.selected });
+  }
+  // ...
+};
+</script> <script type="text/plain" class="language-jsx">// app.js
+// Create a mapping of the store to a prop
+const mapStateToProps = store => ({ store: store });
+
+// Bind the actions and add them as a prop on a Container component
+const Container = (props) => {
+  const boundActions = bindActionCreators(actions, props.dispatch);
+  return (
+    <Map store={props.store} actions={boundActions} />
+  );
+};
+
+// Connect the container
+const App = connect(mapStateToProps)(Container);
+
+// Provide the store to the App
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('part8-app')
+);
+</script> </div> <div class="homework"> <h6><i class="fa fa-pencil"></i> Try it together!</h6> <ul> <li>Update your store from the dropdown to change the highlighted state.</li> <li>Get some data from our results API and use it to plugin our Results component.</li> </ul> </div> <div class="further-reading"> <h6><i class="fa fa-bookmark"></i> Further reading</h6> <ul> <li> <a href="https://reactjs.org/docs/thinking-in-react.html" target="_blank">Thinking in React</a> </li> <li> <a href="https://redux.js.org/" target="_blank">Redux docs</a> </li> <li> <a href="https://www.youtube.com/watch?v=gvVpSezT5_M&feature=youtu.be&t=11m51s" target="_blank"> Why Redux for newsapps? Reusing/Repurposing <i class="fa fa-video-camera"></i></a> </li> </ul> </div> </section> <h1>Xcc</h1> <section> <h4>What to do next</h4> <p> Check out our <a href="https://github.com/The-Politico/simple-bundler" target="_blank">simple bundler</a>, which you can use to build your own project. </p> <p> Flag us on twitter or in news nerdery with questions, challenges and success stories. </p> </section> <h1>fin!</h1> </article> <script src="78de3e9a5a948f2d4c50e43fb1b83949.js"></script> <script src="62eb6ef65a785e8940f7394f6cbcb819.js"></script> <script src="ca6a2794313ef7e5ac164bee80ecc7a7.js"></script> <script src="6905b80f226ed2a3539a05e74d2f982d.js"></script> <script src="1c1c54c0441e39a8b91533a4ec37ef86.js"></script> <script src="6598392ab43879d09ba32d6a6d4df682.js"></script> <script src="47c6a893c21fa26afc6959dac4284733.js"></script> <script src="4af10c7734eec8f446defd2149e8ab16.js"></script> <script src="850fdd15d8ec9d192c1c116f1cce29df.js"></script> </body> </html> 

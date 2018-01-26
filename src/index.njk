@@ -1,21 +1,67 @@
 {%extends "templates/base.njk"%}
 
 {%block content%}
-
+<div class="byline gonzo">
+  <a href="https://twitter.com/tylrfishr">Tyler Fisher</a> | <a href="https://twitter.com/JonRMcClure">Jon M<sup>c</sup>Clure</a>
+</div>
+<h1>---</h1>
 <section>
-  <h4>Future Syntax</h4>
-  <p>We'll be using a few parts of future JavaScript syntax. If you haven't messed around with it yet, <a href="https://codeburst.io/es6-tutorial-for-beginners-5f3c4e7960be" target="_blank">here's a good walk-through</a>.</p>
-  <p>For the purposes of today, we'll mostly just use <a href="./syntax.njk">these basics.</a></p>
+  <h4>Why you're here</h4>
+  <p><a href="https://docs.google.com/presentation/d/1OMPpGp1AWZCbCgWsUUdvEyxlBWY_KTXfxvCkYktaVp4/edit?usp=sharing" target="_blank">Why you need a reactive framework in your life</a>, in five minutes or less.</p>
 </section>
 
+<section>
+  <h4>What you need</h4>
+  <p>Grab this repo from <a href="https://github.com/The-Politico/nicar2018_reactive-frameworks" target="_blank">github</a> and install dependencies. (Assuming you have <a href="https://nodejs.org/en/download/">node</a> installed already.)</p>
+<script type="text/plain" class="language-bash">$ git clone git@github.com:The-Politico/nicar2018_reactive-frameworks.git
+$ cd nicar2018_reactive-frameworks
+$ npm install</script>
+<p>Now run the dev script to get started.</p>
+<script type="text/plain" class="language-bash">$ npm start</script>
+<p>Check out the files in your code editor of choice. The ones we'll be playing with are here:</p>
+<script type="text/plain" class="language-bash">src/
+ -- js/
+ -- -- part1/
+ -- -- part2/
+etc...
+</script>
+</section>
+
+<section>
+  <h4>Note on Future Syntax</h4>
+  <p>We'll be using a few parts of future JavaScript syntax. If you haven't messed around with it yet, <a href="https://codeburst.io/es6-tutorial-for-beginners-5f3c4e7960be" target="_blank">here's a good walk-through</a>.</p>
+  <p>For the purposes of today, though, just check out <a href="./syntax.njk">these basics.</a></p>
+</section>
+
+<h1>><<</h1>
+
 {%include "templates/part1.njk"%}
+<h1>~~/</h1>
 {%include "templates/part2.njk"%}
+<h1>X#X</h1>
 {%include "templates/part3.njk"%}
+<h1>&--</h1>
 {%include "templates/part4.njk"%}
+<h1>+**</h1>
 {%include "templates/part5.njk"%}
+<h1>$(()</h1>
 {%include "templates/part6.njk"%}
+<h1>^^``</h1>
 {%include "templates/part7.njk"%}
+<h1>{\{~</h1>
 {%include "templates/part8.njk"%}
+<h1>Xcc</h1>
+<section>
+  <h4>What to do next</h4>
+  <p>
+    Check out our <a href="https://github.com/The-Politico/simple-bundler" target="_blank">simple bundler</a>, which you can use to build your own project.
+  </p>
+  <p>
+    Flag us on twitter or in news nerdery with questions, challenges and success stories.
+  </p>
+</section>
+
+<h1>fin!</h1>
 {%endblock%}
 
 {%block scripts%}

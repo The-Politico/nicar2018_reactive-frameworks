@@ -1,4 +1,5 @@
 import './../scss/main.scss';
+import './../scss/results.scss';
 
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx';
