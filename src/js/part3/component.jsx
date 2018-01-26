@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import React from 'react';
 
 const ListItem = (props) => (
   <li>{props.text}</li>

@@ -1,0 +1,203 @@
+{ "results": {
+    "Alabama": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Alaska": {
+      "Something": 35,
+      "Else": 65
+    },
+    "Arizona": {
+      "Something": 54,
+      "Else": 46
+    },
+    "Arkansas": {
+      "Something": 32,
+      "Else": 68
+    },
+    "California": {
+      "Something": 57,
+      "Else": 43
+    },
+    "Colorado": {
+      "Something": 22,
+      "Else": 78
+    },
+    "Connecticut": {
+      "Something": 63,
+      "Else": 37
+    },
+    "Delaware": {
+      "Something": 72,
+      "Else": 28
+    },
+    "Florida": {
+      "Something": 66,
+      "Else": 34
+    },
+    "Georgia": {
+      "Something": 22,
+      "Else": 78
+    },
+    "Hawaii": {
+      "Something": 94,
+      "Else": 6
+    },
+    "Idaho": {
+      "Something": 49,
+      "Else": 51
+    },
+    "Illinois": {
+      "Something": 48,
+      "Else": 52
+    },
+    "Indiana": {
+      "Something": 47,
+      "Else": 53
+    },
+    "Iowa": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Kansas": {
+      "Something": 44,
+      "Else": 56
+    },
+    "Kentucky": {
+      "Something": 58,
+      "Else": 42
+    },
+    "Louisiana": {
+      "Something": 52,
+      "Else": 48
+    },
+    "Maine": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Maryland": {
+      "Something": 68,
+      "Else": 32
+    },
+    "Massachusetts": {
+      "Something": 55,
+      "Else": 45
+    },
+    "Michigan": {
+      "Something": 53,
+      "Else": 47
+    },
+    "Minnesota": {
+      "Something": 47,
+      "Else": 53
+    },
+    "Mississippi": {
+      "Something": 23,
+      "Else": 77
+    },
+    "Missouri": {
+      "Something": 43,
+      "Else": 57
+    },
+    "Montana": {
+      "Something": 55,
+      "Else": 45
+    },
+    "Nebraska": {
+      "Something": 23,
+      "Else": 77
+    },
+    "Nevada": {
+      "Something": 83,
+      "Else": 17
+    },
+    "New Hampshire": {
+      "Something": 33,
+      "Else": 67
+    },
+    "New Jersey": {
+      "Something": 33,
+      "Else": 67
+    },
+    "New Mexico": {
+      "Something": 33,
+      "Else": 67
+    },
+    "New York": {
+      "Something": 33,
+      "Else": 67
+    },
+    "North Carolina": {
+      "Something": 33,
+      "Else": 67
+    },
+    "North Dakota": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Ohio": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Oklahoma": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Oregon": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Pennsylvania": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Rhode Island": {
+      "Something": 33,
+      "Else": 67
+    },
+    "South Carolina": {
+      "Something": 33,
+      "Else": 67
+    },
+    "South Dakota": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Tennessee": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Texas": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Utah": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Vermont": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Virginia": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Washington": {
+      "Something": 33,
+      "Else": 67
+    },
+    "West Virginia": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Wisconsin": {
+      "Something": 33,
+      "Else": 67
+    },
+    "Wyoming": {
+      "Something": 33,
+      "Else": 67
+    }
+  }
+}

@@ -1,6 +1,6 @@
 // PART 4: Hello Component Classes
-
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 import ListItem from './component';
 import data from './data.json';
 
@@ -18,4 +18,4 @@ const someJSX = (
   </div>
 );
 
-render(someJSX, root, root.lastChild);
+render(someJSX, root);

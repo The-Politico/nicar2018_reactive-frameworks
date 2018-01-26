@@ -1,16 +1,18 @@
-// PART 6: Hello State
-
-import { h, Component, render } from 'preact';
+// PART 7: Hello Bubbling
+import React from 'react';
+import { render } from 'react-dom';
 import ChildComponent from './component';
 import data from './data.json';
 import emoji from './emoji';
 
 const root = document.getElementById('part7-app');
 
-class ParentComponent extends Component {
+class ParentComponent extends React.Component {
   constructor (props) {
     super();
-    this.state.animal = 'Lions';
+    this.state = {
+      animal: 'Lions',
+    };
   }
 
   render () {
@@ -31,4 +33,4 @@ class ParentComponent extends Component {
   }
 }
 
-render(<ParentComponent />, root, root.lastChild);
+render(<ParentComponent />, root);

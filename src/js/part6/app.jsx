@@ -1,6 +1,6 @@
 // PART 6: Hello State
-
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 import Component from './component';
 import data from './data.json';
 
@@ -14,4 +14,4 @@ const someJSX = (
   </div>
 );
 
-render(someJSX, root, root.lastChild);
+render(someJSX, root);

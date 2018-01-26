@@ -1,6 +1,6 @@
 // PART 2: Hello Components
-
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 
 const root = document.getElementById('part2-app');
 
@@ -25,4 +25,4 @@ const someJSX = (
   </div>
 );
 
-render(someJSX, root, root.lastChild);
+render(someJSX, root);

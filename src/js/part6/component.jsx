@@ -1,16 +1,17 @@
 // PART 3: Hello Props
+import React from 'react';
 
-import { h, Component } from 'preact';
-
-class ScaryComponent extends Component {
+class ScaryComponent extends React.Component {
   constructor (props) {
     super();
-    this.state.selectedAnimal = props.options[0];
+    this.state = {
+      selectedAnimal: props.options[0],
+    };
   }
 
-  render (props, state) {
+  render () {
     // Create our options
-    const radioOptions = props.options.map(option => (
+    const radioOptions = this.props.options.map(option => (
       <div>
         <label>
           <input type='radio' name='radio-options' />

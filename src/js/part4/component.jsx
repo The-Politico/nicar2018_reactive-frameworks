@@ -1,8 +1,8 @@
-import { h, Component } from 'preact';
+import React from 'react';
 
-class ListItem extends Component {
-  render (props) {
-    return <li>{props.text}</li>;
+class ListItem extends React.Component {
+  render () {
+    return (<li>{this.props.text}</li>);
   }
 }
 

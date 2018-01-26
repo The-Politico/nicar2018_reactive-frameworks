@@ -1,15 +1,16 @@
 // PART 7: Hello Bubbling
+import React from 'react';
 
-import { h, Component } from 'preact';
-
-class ScaryComponent extends Component {
+class ScaryComponent extends React.Component {
   constructor (props) {
     super();
-    this.state.selectedAnimal = props.options[0];
+    this.state = {
+      selectedAnimal: props.options[0],
+    };
   }
 
-  render (props, state) {
-    const radioOptions = props.options.map(option => (
+  render () {
+    const radioOptions = this.props.options.map(option => (
       <div>
         <label>
           <input
@@ -17,7 +18,7 @@ class ScaryComponent extends Component {
             name='radio-options'
             onClick={() => {
               this.setState({ selectedAnimal: option });
-              props.changeAnimal(option);
+              this.props.changeAnimal(option);
             }}
             checked={option === this.state.selectedAnimal}
           />

@@ -1,6 +1,6 @@
 // PART 3: Hello Props
-
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 import ListItem from './component';
 
 const root = document.getElementById('part3-app');
@@ -13,4 +13,4 @@ const someJSX = (
   </div>
 );
 
-render(someJSX, root, root.lastChild);
+render(someJSX, root);
