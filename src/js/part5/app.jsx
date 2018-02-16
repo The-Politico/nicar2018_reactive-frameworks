@@ -6,6 +6,8 @@ import data from './data.json';
 
 const root = document.getElementById('part5-app');
 
+const sortData = (data) => data.sort((a, b) => b.value - a.value);
+
 const datums = data.map(d => (
   <DataPoint datum={d} />
 ));

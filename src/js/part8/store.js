@@ -8,6 +8,7 @@ import _ from 'lodash';
 const initialState = {
   states: [],
   selected: null,
+  // results: [],
 };
 
 // ACTIONS
@@ -27,6 +28,10 @@ export const actions = {
     type: 'ADD_STATES',
     states: states,
   }),
+  // addResults: (results) => ({
+  //   type: 'ADD_RESULTS',
+  //   results: results,
+  // }),
 };
 
 // REDUCER
@@ -41,6 +46,8 @@ const reducer = (currentState = initialState, action) => {
       return _.assign({}, currentState, { selected: action.selected });
     case 'ADD_STATES':
       return _.assign({}, currentState, { states: action.states });
+    // case 'ADD_RESULTS':
+    //   return _.assign({}, currentState, { results: action.results });
   }
   // Reducers should always have a fall-through that just returns
   // the currentState if an action that doesn't match is sent through.

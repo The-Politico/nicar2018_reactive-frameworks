@@ -1,7 +1,7 @@
 // PART 7: Hello Bubbling
 import React from 'react';
 
-class ScaryComponent extends React.Component {
+class ChildComponent extends React.Component {
   constructor (props) {
     super();
     this.state = {
@@ -35,4 +35,4 @@ class ScaryComponent extends React.Component {
   }
 }
 
-export default ScaryComponent;
+export default ChildComponent;

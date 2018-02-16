@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Map from './components/map';
 import Select from './components/select';
+// import Results from './components/results';
 import { store, actions } from './store';
 import { connect, Provider } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -14,6 +15,11 @@ import { states } from './data/states.json';
 store.dispatch(actions.addStates(states));
 store.dispatch(actions.changeSelected(states[0].name));
 
+// fetch('http://localhost:2222/results')
+//   .then((response) => response.json())
+//   .then((data) => {
+//     store.dispatch(actions.addResults(data));
+//   });
 // --------------------------------------
 // CONNECTING OUR STORE TO OUR COMPONENTS
 // --------------------------------------
