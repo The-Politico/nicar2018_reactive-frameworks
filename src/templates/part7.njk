@@ -1,29 +1,42 @@
 <section>
-  <h4>Part 7: Hello Bubbling</h4>
-  <p>Event bubbling provides a way for child components to update their parents' state.</p>
+  <h4>Part 7: Hello Component Lifecycle. (Hello D3.)</h4>
+  <p>Components have a "lifecycle" that triggers methods in the moments before and after components are added to the DOM or updated. You can plug third-party libraries into those methods to do complex things.</p>
+
   <div id="part7-app" class="demo"></div>
 
 <div class="key-code">
 <h6><i class="fa fa-code"></i> Key code</h6>
-<script type="text/plain" class="language-jsx">// app.js
-// Pass a parent component's update function down to its child
-<ChildComponent
-  options={data}
-  changeAnimal={
-    (animal) => this.setState({ animal: animal })
-  }
-/>
-</script>
-<script type="text/plain" class="language-jsx">// component.js
-// The child can then call that function to update its parent!
-<input
-  type='radio'
-  name='radio-options'
-  onClick={() => {
-    // ...
-    props.changeAnimal(option);
-  }}
-/>
+<script type="text/plain" class="language-jsx">// Use Lifecycle methods to hook third party libraries into React
+componentDidMount () {
+  const node = d3.select(`.viz-box.no${this.datum.value} svg`);
+
+  // ...
+
+  node.append('rect')
+    .attr('width', sideLength)
+    .attr('height', sideLength)
+    .attr('x', 0)
+    .attr('y', 0);
+}
 </script>
 </div>
+
+  <div class="homework">
+    <h6><i class="fa fa-pencil"></i> Try it together!</h6>
+    <ul>
+      <li>Use another lifecycle method to update the chart when the button is clicked.</li>
+    </ul>
+  </div>
+
+  <div class="further-reading">
+    <h6><i class="fa fa-bookmark"></i> Further reading</h6>
+    <ul>
+      <li>
+        <a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank">React Component Lifecycle</a>
+      </li>
+      <li>
+        <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" target="_blank">Preact Lifecycle Methods</a>
+      </li>
+    </ul>
+  </div>
 </section>

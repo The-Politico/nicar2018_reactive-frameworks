@@ -1,7 +1,6 @@
-// PART 3: Hello Props
 import React from 'react';
 
-class ScaryComponent extends React.Component {
+class ChildComponent extends React.Component {
   constructor (props) {
     super();
     this.state = {
@@ -10,11 +9,18 @@ class ScaryComponent extends React.Component {
   }
 
   render () {
-    // Create our options
     const radioOptions = this.props.options.map(option => (
-      <div>
+      <div key={option}>
         <label>
-          <input type='radio' name='radio-options' />
+          <input
+            type='radio'
+            name='part6-radio-options'
+            onChange={() => {
+              this.setState({ selectedAnimal: option });
+              this.props.changeAnimal(option);
+            }}
+            checked={option === this.state.selectedAnimal}
+          />
           {option}
         </label>
       </div>
@@ -22,11 +28,10 @@ class ScaryComponent extends React.Component {
 
     return (
       <div>
-        <h3>{this.state.selectedAnimal}, oh my!</h3>
         {radioOptions}
       </div>
     );
   }
 }
 
-export default ScaryComponent;
+export default ChildComponent;

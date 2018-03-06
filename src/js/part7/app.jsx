@@ -1,36 +1,12 @@
-// PART 7: Hello Bubbling
+// Hello Component Lifecycle. (Hello D3.)
 import React from 'react';
 import { render } from 'react-dom';
-import ChildComponent from './component';
-import data from './data.json';
-import emoji from './emoji';
+import ChartWrapper from './chartwrapper';
 
 const root = document.getElementById('part7-app');
 
-class ParentComponent extends React.Component {
-  constructor (props) {
-    super();
-    this.state = {
-      animal: 'Lions',
-    };
-  }
+const someJSX = (
+  <ChartWrapper />
+);
 
-  render () {
-    return (
-      <div>
-
-        <h1>{emoji[this.state.animal]}</h1>
-
-        <ChildComponent
-          options={data}
-          changeAnimal={
-            (animal) => this.setState({ animal: animal })
-          }
-        />
-
-      </div>
-    );
-  }
-}
-
-render(<ParentComponent />, root);
+render(someJSX, root);

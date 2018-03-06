@@ -7,7 +7,7 @@ import data from './data.json';
 const root = document.getElementById('part4-app');
 
 const items = data.map(animal => (
-  <ListItem text={animal} />
+  <ListItem key={animal} text={animal} />
 ));
 
 const someJSX = (

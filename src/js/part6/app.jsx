@@ -1,17 +1,36 @@
-// PART 6: Hello State
+// PART 6: Hello Bubbling
 import React from 'react';
 import { render } from 'react-dom';
-import Component from './component';
+import ChildComponent from './component';
 import data from './data.json';
+import emoji from './emoji';
 
 const root = document.getElementById('part6-app');
 
-const someJSX = (
-  <div>
-    <ul>
-      <Component options={data} />
-    </ul>
-  </div>
-);
+class ParentComponent extends React.Component {
+  constructor (props) {
+    super();
+    this.state = {
+      animal: 'Lions',
+    };
+  }
 
-render(someJSX, root);
+  render () {
+    return (
+      <div>
+
+        <h1>{emoji[this.state.animal]}</h1>
+
+        <ChildComponent
+          options={data}
+          changeAnimal={
+            (animal) => this.setState({ animal: animal })
+          }
+        />
+
+      </div>
+    );
+  }
+}
+
+render(<ParentComponent />, root);

@@ -1,39 +1,34 @@
 import React from 'react';
-import * as d3 from 'd3';
 
-const vizScale = d3.scaleLinear()
-  .domain([0, 10])
-  .range([0, 100]);
-
-class DataPoint extends React.Component {
-  // We can fire some code AFTER react has rendered our div container
-  // in the componentDidMount lifecycle method.
-  componentDidMount () {
-    const node = d3.select(`.viz-box.no${this.datum.value} svg`);
-
-    const sideLength = vizScale(Math.sqrt(this.datum.value));
-
-    node.append('rect')
-      .attr('width', sideLength)
-      .attr('height', sideLength)
-      .attr('x', 0)
-      .attr('y', 0);
+class ScaryComponent extends React.Component {
+  constructor (props) {
+    super();
+    this.state = {
+      selectedAnimal: props.options[0],
+    };
   }
 
   render () {
-    this.datum = this.props.datum;
+    // Create our options
+    const radioOptions = this.props.options.map(option => (
+      <div key={option}>
+        <label>
+          <input
+            type='radio'
+            name='part5-radio-options'
+          />
+          {option}
+        </label>
+      </div>
+    ));
 
     return (
-      <div className='company-box'>
-        <h6>{this.datum.name}</h6>
-        <div
-          className={`viz-box no${this.datum.value}`}
-        >
-          <svg />
-        </div>
+      <div>
+        <h3>{this.state.selectedAnimal}, oh my!</h3>
+        {radioOptions}
       </div>
     );
   }
 }
 
-export default DataPoint;
+export default ScaryComponent;

@@ -1,30 +1,41 @@
 <section>
-  <h4>Part 5: Hello Component Lifecycle. (Hello D3.)</h4>
-  <p>Components have a "lifecycle" that triggers methods in the moments before and after components are added to the DOM or updated. You can plug third-party libraries into those methods to do complex things.</p>
+  <h4>Part 5: Hello State</h4>
+  <p>As opposed to props, which are data handed down to a component from its parent, state is data that is internal to the component and that it can create and change on its own.</p>
 
   <div id="part5-app" class="demo"></div>
 
+
 <div class="key-code">
 <h6><i class="fa fa-code"></i> Key code</h6>
-<script type="text/plain" class="language-jsx">// Use Lifecycle methods to hook third party libraries into React
-componentDidMount () {
-  const node = d3.select(`.viz-box.no${this.datum.value} svg`);
+<script type="text/plain" class="language-jsx">// State are values maintained internally within a component.
+// But a component's state can be set by external values by using prop
+class ScaryComponent extends Component {
+  constructor (props) {
+    super();
+    this.state.selectedOption = props.options[0];
+  }
 
   // ...
-
-  node.append('rect')
-    .attr('width', sideLength)
-    .attr('height', sideLength)
-    .attr('x', 0)
-    .attr('y', 0);
+  render () {
+    return (
+      // ...
+      <h3>{this.state.selectedOption}, oh my!</h3>
+      // ...
+    );
+  }
 }
+
+// We can change our state inside our component with:
+//  this.setState({ selectedOption: newValue });
 </script>
 </div>
+
 
   <div class="homework">
     <h6><i class="fa fa-pencil"></i> Try it together!</h6>
     <ul>
-      <li>Fix the order in the data and use another lifecycle method to update the chart.</li>
+      <li>Update the component's state when a radio button is clicked.</li>
+      <li>Make the default button checked when the component is mounted -- i.e., a "controlled component!"</li>
     </ul>
   </div>
 
@@ -32,10 +43,10 @@ componentDidMount () {
     <h6><i class="fa fa-bookmark"></i> Further reading</h6>
     <ul>
       <li>
-        <a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" target="_blank">React Component Lifecycle</a>
+        <a href="https://reactjs.org/docs/state-and-lifecycle.html" target="_blank">State and Lifecycle</a>
       </li>
       <li>
-        <a href="https://preactjs.com/guide/api-reference#lifecycle-methods" target="_blank">Preact Lifecycle Methods</a>
+        <a href="https://reactjs.org/docs/forms.html#controlled-components" target="_blank">Controlled Components</a>
       </li>
     </ul>
   </div>
