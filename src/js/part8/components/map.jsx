@@ -24,7 +24,7 @@ class Map extends React.Component {
       ))
       .attr('stroke', '#666')
       .attr('fill', d => {
-        if (d.properties.name === this.props.store.selected) {
+        if (d.properties.name === this.props.selected) {
           return 'orange';
         }
         return '#ccc';
@@ -37,7 +37,7 @@ class Map extends React.Component {
     paths
       .attr('stroke', '#666')
       .attr('fill', d => {
-        if (d.properties.name === this.props.store.selected) {
+        if (d.properties.name === this.props.selected) {
           return 'orange';
         }
         return '#ccc';

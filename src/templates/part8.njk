@@ -3,61 +3,10 @@
   <p>With any normally complex app, chaining components and bubbling events through them becomes messy. That's when we can create a central Store that we can update from anywhere in the app and react to in our components through basic props.</p>
   <div id="part8-app" class="demo"></div>
 
-<div class="key-code">
-<h6><i class="fa fa-code"></i> Key code</h6>
-<script type="text/plain" class="language-jsx">// store.js
-// Create some state
-const initialState = {
-  selected: null,
-};
-
-// Write an action to signal an update to the state
-export const actions = {
-  changeSelected: (selected) => ({
-    type: 'CHANGE_SELECTED',
-    selected: selected
-  }),
-}
-
-// Write a reducer to process the update and change the store
-const reducer = (currentState = initialState, action) => {
-  switch (action.type) {
-    case 'CHANGE_SELECTED':
-      return _.assign({}, currentState, { selected: action.selected });
-  }
-  // ...
-};
-</script>
-<script type="text/plain" class="language-jsx">// app.js
-// Create a mapping of the store to a prop
-const mapStateToProps = store => ({ store: store });
-
-// Bind the actions and add them as a prop on a Container component
-const Container = (props) => {
-  const boundActions = bindActionCreators(actions, props.dispatch);
-  return (
-    <Map store={props.store} actions={boundActions} />
-  );
-};
-
-// Connect the container
-const App = connect(mapStateToProps)(Container);
-
-// Provide the store to the App
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('part8-app')
-);
-</script>
-</div>
-
   <div class="homework">
     <h6><i class="fa fa-pencil"></i> Try it together!</h6>
     <ul>
-      <li>Update your store from the dropdown to change the highlighted state.</li>
-      <li>Get some data from our results API and use it to plugin our Results component.</li>
+      <li>Plug in our prefab Results component.</li>
     </ul>
   </div>
 
@@ -68,10 +17,7 @@ render(
         <a href="https://reactjs.org/docs/thinking-in-react.html" target="_blank">Thinking in React</a>
       </li>
       <li>
-        <a href="https://redux.js.org/" target="_blank">Redux docs</a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/watch?v=gvVpSezT5_M&feature=youtu.be&t=11m51s" target="_blank"> Why Redux for newsapps? Reusing/Repurposing <i class="fa fa-video-camera" /></a>
+        <a href="https://redux.js.org/" target="_blank">Redux</a>
       </li>
     </ul>
   </div>

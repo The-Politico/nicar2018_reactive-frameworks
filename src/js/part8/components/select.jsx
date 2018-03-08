@@ -1,20 +1,19 @@
 import React from 'react';
 import Select from 'react-select';
 
-class SelectBox extends React.Component {
-  render () {
-    const store = this.props.store;
-    return (<Select
-      name='form-field-name'
-      value={store.selected}
-      onChange={(opt) => this.props.actions.changeSelected(opt.value)}
-      options={store.states.map(d => ({
-        value: d.name,
-        label: d.name,
-      }))}
-      clearable={false}
-    />);
-  }
-}
+const SelectBox = (props) => {
+  const options = props.states.map(d => ({
+    value: d.name,
+    label: d.name,
+  }));
+
+  return (<Select
+    name='form-field-name'
+    value={props.selected}
+    onChange={(opt) => props.update(opt.value)}
+    options={options}
+    clearable={false}
+  />);
+};
 
 export default SelectBox;
